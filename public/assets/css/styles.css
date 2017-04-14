@@ -15,7 +15,7 @@ body {
     #landing-splash {
       height: auto;
       padding: 20px; } }
-  #landing-splash button.cta {
+  #landing-splash a.cta {
     background: transparent;
     border: 2px solid white;
     border-radius: 0;
@@ -28,7 +28,7 @@ body {
     transition: opacity 1s ease-in; }
     #landing-splash video#video.hideaway {
       opacity: 0; }
-  #landing-splash #container-intro h3 {
+  #landing-splash #container-intro h4 {
     color: white;
     font-style: italic;
     font-weight: 100; }
@@ -37,6 +37,7 @@ body {
     #landing-splash #container-logo.hideaway {
       opacity: 0; }
   #landing-splash #container-cta {
+    margin-top: 10px;
     transition: opacity 5s ease-in; }
     #landing-splash #container-cta .btn.cta {
       width: 25%; }

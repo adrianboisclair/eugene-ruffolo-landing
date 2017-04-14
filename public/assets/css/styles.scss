@@ -21,7 +21,7 @@ body{
         padding: 20px;
     }
 
-    button.cta{
+    a.cta{
         background: transparent;
         border: 2px solid white;
         border-radius: 0;
@@ -42,7 +42,7 @@ body{
 
     #container-{
         &intro{
-            h3{
+            h4{
                 color: white;
                 font-style: italic;
                 font-weight: 100;
@@ -55,6 +55,7 @@ body{
             }
         }
         &cta{
+            margin-top: 10px;
             @include transitionIn(5s);
             .btn.cta{
                 width: 25%;
