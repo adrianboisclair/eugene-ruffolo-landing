@@ -1,5 +1,7 @@
 $background: '../images/stock-xmas-studio-shot.jpg';
 $vid-height : 40vh;
+$sm-screen: 768px;
+
 @mixin transitionIn($time) {
     transition: opacity $time ease-in;
 }
@@ -15,6 +17,10 @@ body{
     height: 100vh;
     text-align: center;
     width: 100%;
+    @media(max-width: $sm-screen) {
+        height: auto;
+        padding: 20px;
+    }
 
     button.cta{
         background: transparent;
@@ -51,6 +57,19 @@ body{
             display: block;
             margin: auto;
             max-height: 200px;
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        div#album,
+        div#book{
+            margin: 10px 20px;
+        }
+        @media (max-width: $sm-screen) {
+            display: block;
+            width: 100%;
         }
     }
 

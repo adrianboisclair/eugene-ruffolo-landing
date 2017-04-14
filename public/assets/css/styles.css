@@ -8,6 +8,10 @@ body {
   height: 100vh;
   text-align: center;
   width: 100%; }
+  @media (max-width: 768px) {
+    #landing-splash {
+      height: auto;
+      padding: 20px; } }
   #landing-splash button.cta {
     background: transparent;
     border: 2px solid white;
@@ -32,5 +36,15 @@ body {
       display: block;
       margin: auto;
       max-height: 200px; }
+  #landing-splash .flex-container {
+    display: flex;
+    justify-content: center; }
+    #landing-splash .flex-container div#album,
+    #landing-splash .flex-container div#book {
+      margin: 10px 20px; }
+    @media (max-width: 768px) {
+      #landing-splash .flex-container {
+        display: block;
+        width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
