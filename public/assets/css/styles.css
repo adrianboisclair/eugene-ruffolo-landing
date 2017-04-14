@@ -7,7 +7,10 @@ body {
   height: 100%;
   height: 100vh;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  transition: opacity 5s ease-in; }
+  #landing-splash.fadeOut {
+    opacity: 0; }
   @media (max-width: 768px) {
     #landing-splash {
       height: auto;
@@ -18,9 +21,10 @@ body {
     border-radius: 0;
     color: white; }
   #landing-splash video#video {
+    border: 10px double rgba(221, 221, 221, 0.1);
     height: 40vh;
-    width: 100%;
     opacity: 1;
+    width: auto;
     transition: opacity 1s ease-in; }
     #landing-splash video#video.hideaway {
       opacity: 0; }
@@ -31,6 +35,12 @@ body {
   #landing-splash #container-logo {
     transition: opacity 1s ease-in; }
     #landing-splash #container-logo.hideaway {
+      opacity: 0; }
+  #landing-splash #container-cta {
+    transition: opacity 5s ease-in; }
+    #landing-splash #container-cta .btn.cta {
+      width: 25%; }
+    #landing-splash #container-cta.hideaway {
       opacity: 0; }
   #landing-splash #book {
     transition: opacity 2s ease-in; }
@@ -59,7 +69,7 @@ body {
     justify-content: center; }
     #landing-splash .flex-container div#album,
     #landing-splash .flex-container div#book {
-      margin: 10px 20px; }
+      margin: 0 20px; }
     @media (max-width: 768px) {
       #landing-splash .flex-container {
         display: block;

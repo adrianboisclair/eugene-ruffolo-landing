@@ -12,6 +12,10 @@ body{
     height: 100vh;
     text-align: center;
     width: 100%;
+    &.fadeOut{
+        opacity: 0;
+    }
+    @include transitionIn(5s);
     @media(max-width: $sm-screen) {
         height: auto;
         padding: 20px;
@@ -25,9 +29,10 @@ body{
     }
 
     video#video{
+        border: 10px double rgba(221, 221, 221, 0.1);
         height:$vid-height;
-        width:100%;
         opacity: 1;
+        width: auto;
         @include transitionIn(1s);
         &.hideaway{
             opacity: 0;
@@ -45,6 +50,15 @@ body{
         }
         &logo{
             @include transitionIn(1s);
+            &.hideaway{
+                opacity: 0;
+            }
+        }
+        &cta{
+            @include transitionIn(5s);
+            .btn.cta{
+                width: 25%;
+            }
             &.hideaway{
                 opacity: 0;
             }
@@ -82,7 +96,7 @@ body{
         justify-content: center;
         div#album,
         div#book{
-            margin: 10px 20px;
+            margin: 0 20px;
         }
         @media (max-width: $sm-screen) {
             display: block;
