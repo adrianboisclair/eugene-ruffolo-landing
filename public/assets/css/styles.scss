@@ -1,0 +1,28 @@
+body{
+    margin:0;
+}
+#landing-splash {
+    width: 100%;
+    height: 100%;
+    background: url(../images/stock-xmas-studio-shot.jpg);
+    background-size: cover;
+    text-align: center;
+    .container-{
+        &video{
+            border: 1px solid red;
+        }
+        &book{
+            border: 1px solid blue;
+        }
+        &album{
+            border: 1px solid green;
+        }
+        &cta{
+            border: 1px solid purple;
+        }
+    }
+    .video video{
+        height:50vh;
+        width:100%;
+     }
+}
