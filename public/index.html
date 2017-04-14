@@ -10,9 +10,21 @@
 <div id="landing-splash">
     <div class="container">
         <div class="row">
+            <div id="container-intro">
+                <h3>Introducing...</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div id="container-logo">
+                <div class="logo">
+                    <img src="assets/images/logo.jpg" alt="Ganto Per Mangiare">
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div id="container-video" class="col-xs-12">
                 <div class="video">
-                    <video id="video" width="320" height="240">
+                    <video id="video" class="test hideaway" width="320" height="240">
                         <source src="assets/video/Emozioni_v2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -20,19 +32,25 @@
             </div>
         </div>
         <div class="row">
-            <div id="container-book" class="col-sm-12 col-md-6">
-                <h1>Column Heading</h1>
-                <img src="assets/images/CANTO_FRONT_COVER.jpeg" alt="Book">
-                <p>Column Content</p>
-            </div>
-            <div id="container-album" class="col-sm-12 col-md-6">
-                <h1>Column Heading</h1>
-                <img src="assets/images/CPM_Cover_1.jpeg" alt="Album Out Now">
-                <p>Column Content</p>
+            <div class="flex-container">
+                <div id="book" class="col-sm-12 col-md-6 hideaway">
+                    <img src="assets/images/CANTO_FRONT_COVER.jpeg" alt="Book">
+                    <!--<h1>Column Heading</h1>-->
+                    <!--<p>Column Content</p>-->
+                    <button class="btn cta">Learn More</button>
+                    <button class="btn cta">Buy Now!</button>
+                </div>
+                <div id="album" class="col-sm-12 col-md-6 hideaway">
+                    <img src="assets/images/CPM_Cover_1.jpeg" alt="Album Out Now">
+                    <!--<h1>Column Heading</h1>-->
+                    <!--<p>Column Content</p>-->
+                    <button class="btn cta">Learn More</button>
+                    <button class="btn cta">Buy Now!</button>
+                </div>
             </div>
             <div id="container-cta">
-                <button class="cta-button btn btn-primary">
-                    Button
+                <button class="btn cta">
+                    Continue to Site
                 </button>
             </div>
         </div>
@@ -41,7 +59,6 @@
 </div>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/scripts.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

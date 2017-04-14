@@ -2,6 +2,6 @@
 <project version="4">
   <component name="TypeScriptCompiler">
     <option name="isCompilerEnabled" value="true" />
-    <option name="typeScriptCompilerParams" value="--module" />
+    <option name="typeScriptCompilerParams" value="-m amd -t ES5  " />
   </component>
 </project>

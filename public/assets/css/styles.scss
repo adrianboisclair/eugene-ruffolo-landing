@@ -1,28 +1,57 @@
+$background: '../images/stock-xmas-studio-shot.jpg';
+$vid-height : 40vh;
+@mixin transitionIn($time) {
+    transition: opacity $time ease-in;
+}
+
 body{
     margin:0;
 }
+
 #landing-splash {
-    width: 100%;
-    height: 100%;
-    background: url(../images/stock-xmas-studio-shot.jpg);
+    background: url($background);
     background-size: cover;
+    height: 100%;
+    height: 100vh;
     text-align: center;
-    .container-{
-        &video{
-            border: 1px solid red;
-        }
-        &book{
-            border: 1px solid blue;
-        }
-        &album{
-            border: 1px solid green;
-        }
-        &cta{
-            border: 1px solid purple;
+    width: 100%;
+
+    button.cta{
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 0;
+        color: white;
+    }
+
+    video#video{
+        height:$vid-height;
+        width:100%;
+        opacity: 1;
+        @include transitionIn(5s);
+    }
+
+    video#video.hideaway{
+        opacity: 0;
+    }
+
+    #container-{
+        &intro{
+            h3{
+                color: white;
+                font-style: italic;
+                font-weight: 100;
+            }
         }
     }
-    .video video{
-        height:50vh;
-        width:100%;
-     }
+
+    #book,
+    #album{
+        @include transitionIn(1s);
+        img{
+            display: block;
+            margin: auto;
+            max-height: 200px;
+        }
+    }
+
 }
