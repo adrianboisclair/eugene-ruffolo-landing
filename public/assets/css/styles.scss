@@ -33,7 +33,7 @@ body{
         height:$vid-height;
         opacity: 1;
         width: auto;
-        @include transitionIn(1s);
+        @include transitionIn(.5s);
         &.hideaway{
             opacity: 0;
         }

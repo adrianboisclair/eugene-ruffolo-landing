@@ -25,7 +25,7 @@ body {
     height: 40vh;
     opacity: 1;
     width: auto;
-    transition: opacity 1s ease-in; }
+    transition: opacity 0.5s ease-in; }
     #landing-splash video#video.hideaway {
       opacity: 0; }
   #landing-splash #container-intro h4 {
