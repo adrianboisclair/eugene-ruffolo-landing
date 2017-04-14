@@ -1,0 +1,3 @@
+@mixin transitionIn($time) {
+    transition: opacity $time ease-in;
+}

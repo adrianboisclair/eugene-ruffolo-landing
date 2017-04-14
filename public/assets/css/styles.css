@@ -21,21 +21,39 @@ body {
     height: 40vh;
     width: 100%;
     opacity: 1;
-    transition: opacity 5s ease-in; }
-  #landing-splash video#video.hideaway {
-    opacity: 0; }
+    transition: opacity 1s ease-in; }
+    #landing-splash video#video.hideaway {
+      opacity: 0; }
   #landing-splash #container-intro h3 {
     color: white;
     font-style: italic;
     font-weight: 100; }
+  #landing-splash #container-logo {
+    transition: opacity 1s ease-in; }
+    #landing-splash #container-logo.hideaway {
+      opacity: 0; }
+  #landing-splash #book {
+    transition: opacity 2s ease-in; }
+  #landing-splash #album {
+    transition: opacity 3s ease-in; }
   #landing-splash #book,
   #landing-splash #album {
-    transition: opacity 1s ease-in; }
+    opacity: 1; }
+    #landing-splash #book p,
+    #landing-splash #album p {
+      color: white; }
+      #landing-splash #book p span,
+      #landing-splash #album p span {
+        color: #ffeaaa; }
+    #landing-splash #book.hideaway,
+    #landing-splash #album.hideaway {
+      opacity: 0; }
     #landing-splash #book img,
     #landing-splash #album img {
       display: block;
       margin: auto;
-      max-height: 200px; }
+      max-height: 200px;
+      padding: 10px; }
   #landing-splash .flex-container {
     display: flex;
     justify-content: center; }

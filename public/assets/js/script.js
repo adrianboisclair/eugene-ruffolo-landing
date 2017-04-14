@@ -1,8 +1,14 @@
+/**
+ * SplashLanding Class
+ * Initializes the Landing Page
+ */
 var SplashLanding = (function () {
     function SplashLanding() {
         this.video = document.getElementById('video');
         this.album = document.getElementById('album');
         this.book = document.getElementById('book');
+        this.logo = document.getElementById('container-logo');
+        this.intro = document.getElementById('container-intro');
         this.init();
     }
     SplashLanding.prototype.init = function () {
@@ -14,6 +20,8 @@ var SplashLanding = (function () {
             _this.video.classList.remove('hideaway');
             _this.album.classList.remove('hideaway');
             _this.book.classList.remove('hideaway');
+            _this.logo.classList.remove('hideaway');
+            _this.intro.classList.remove('hideaway');
             console.log(_this.book);
             _this.video.play();
         }, 100);

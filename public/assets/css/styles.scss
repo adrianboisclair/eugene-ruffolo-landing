@@ -1,10 +1,5 @@
-$background: '../images/stock-xmas-studio-shot.jpg';
-$vid-height : 40vh;
-$sm-screen: 768px;
-
-@mixin transitionIn($time) {
-    transition: opacity $time ease-in;
-}
+@import "partials/mixins";
+@import "partials/variables";
 
 body{
     margin:0;
@@ -33,12 +28,12 @@ body{
         height:$vid-height;
         width:100%;
         opacity: 1;
-        @include transitionIn(5s);
+        @include transitionIn(1s);
+        &.hideaway{
+            opacity: 0;
+        }
     }
 
-    video#video.hideaway{
-        opacity: 0;
-    }
 
     #container-{
         &intro{
@@ -48,15 +43,37 @@ body{
                 font-weight: 100;
             }
         }
+        &logo{
+            @include transitionIn(1s);
+            &.hideaway{
+                opacity: 0;
+            }
+        }
     }
 
+    #book{
+        @include transitionIn(2s);
+    }
+    #album{
+        @include transitionIn(3s);
+    }
     #book,
     #album{
-        @include transitionIn(1s);
+        opacity: 1;
+        p{
+            color: white;
+            span{
+                color: #ffeaaa;
+            }
+        }
+        &.hideaway {
+            opacity: 0;
+        }
         img{
             display: block;
             margin: auto;
             max-height: 200px;
+            padding: 10px;
         }
     }
 
