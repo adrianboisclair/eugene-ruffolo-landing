@@ -2,6 +2,7 @@
 @import "partials/variables";
 
 body{
+    background: #000;
     margin:0;
 }
 
@@ -37,6 +38,10 @@ body{
         &.hideaway{
             opacity: 0;
         }
+        @media (max-width: $sm-screen) {
+            border: none;
+            width: 100%;
+        }
     }
 
 
@@ -59,6 +64,9 @@ body{
             @include transitionIn(5s);
             .btn.cta{
                 width: 25%;
+                @media (max-width: $sm-screen) {
+                    width: 100%;
+                }
             }
             &.hideaway{
                 opacity: 0;

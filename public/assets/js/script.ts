@@ -19,7 +19,6 @@ class SplashLanding {
     }
 
     init() {
-        //this.playerListener();
         this.playBegin();
         this.ctaClickHandler();
     }
@@ -43,6 +42,7 @@ class SplashLanding {
     playerListener() {
         let video = this.video;
         let _this = this;
+
         video.play();
 
         video.addEventListener('progress', function(){
@@ -55,6 +55,8 @@ class SplashLanding {
                 _this.playBegin();
             }
         });
+
+        video.addEventListener('ended', _this.videoEndHandler, false);
     }
 
     videoClickHandler() {
@@ -70,13 +72,32 @@ class SplashLanding {
 
     ctaClickHandler() {
         let _this = this;
-        let _win = window;
-        this.cta.addEventListener('click', function(e){
+        return this.cta.addEventListener('click', function(e){
             _this.splash.classList.add('fadeOut');
-            _win.setTimeout(function() {
+            _this.volumeFadeOut();
+            window.setTimeout(function() {
                 _this.splash.remove();
-            }, 5000)
+            }, 8000)
         });
+    }
+
+    volumeFadeOut() {
+        console.log('volumeFadeOut');
+        var _this = this;
+        var handle = setInterval(myFunc,100);
+        function myFunc() {
+            var currentVol = _this.video.volume;
+            try{
+                _this.video.volume = currentVol - .02;
+            } catch (e) {
+                console.log('stopping video...');
+                clearTimeout(handle);
+            }
+        }
+    }
+
+    videoEndHandler() {
+        return this.cta.click();
     }
 }
 
